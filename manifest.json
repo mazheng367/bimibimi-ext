@@ -1,0 +1,43 @@
+{
+  "description": "bimibimi ext",
+  "manifest_version": 2,
+  "name": "bimibimi",
+  "version": "1.1",
+  "icons": {
+    "32": "resources/favicon.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "32": "resources/favicon.png"
+    },
+    "default_title": "bimi-acg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://bimibimi.cc/*/play/*"
+      ],
+      "js": [
+        "dist/play.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://bimibimi.cc/*",
+        "*://bimiacg.com/"
+      ],
+      "js": [
+        "dist/index.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "dist/background.js"
+    ]
+  },
+  "permissions": [
+    "*://49.234.56.246/*",
+    "tabs"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2017",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": [
+        "/*"
+      ],
+      "lib": [
+        "esnext",
+        "dom",
+        "dom.iterable",
+        "scripthost"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
